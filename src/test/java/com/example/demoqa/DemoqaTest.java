@@ -63,7 +63,7 @@ public class DemoqaTest {
                         "Address Moscow, lenina st 25\n" +
                         "State and City Uttar Pradesh Agra"
         ));
-
+        $x("//button[text()='Close']").click();
 
     }
 }
