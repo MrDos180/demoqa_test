@@ -13,14 +13,15 @@ import static com.codeborne.selenide.Selenide.*;
 
 public class DemoqaTest {
     @BeforeAll
-    static void beforeAll(){
+    static void beforeAll() {
         Configuration.holdBrowserOpen = true;
         //Configuration.browserSize = "1920x1080";
         Configuration.startMaximized = true;
         Configuration.baseUrl = "https://demoqa.com";
     }
+
     @Test
-    void fillFormTest(){
+    void fillFormTest() {
         open("/automation-practice-form");
         $x("//input[@id='firstName']").setValue("Ivan");
         $x("//input[@id='lastName']").setValue("Drago");
@@ -45,7 +46,7 @@ public class DemoqaTest {
         $x("//div[text()='Uttar Pradesh']").click();
         $x("//div[text()='Select City']").click();
         $x("//div[text()='Agra']").click();
-        executeJavaScript("arguments[0].click();",$x("//button[@id='submit']"));
+        executeJavaScript("arguments[0].click();", $x("//button[@id='submit']"));
 
         $x("//div[text()='Thanks for submitting the form']").shouldBe(Condition.visible);
 
@@ -62,23 +63,6 @@ public class DemoqaTest {
                         "Address Moscow, lenina st 25\n" +
                         "State and City Uttar Pradesh Agra"
         ));
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     }
