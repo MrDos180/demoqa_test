@@ -29,10 +29,8 @@ public class DemoqaTest {
         $x("//label[text()='Male']").click();
         $x("//input[@id='userNumber']").setValue("8505555555");
         $x("//input[@id='dateOfBirthInput']").click();
-        $x("//select[@class='react-datepicker__month-select']").click();
-        $x("//option[text()='February']").click();
-        $x("//select[@class='react-datepicker__year-select']").click();
-        $x("//option[text()='1988']").click();
+        $x("//select[@class='react-datepicker__month-select']").selectOption("February");
+        $x("//select[@class='react-datepicker__year-select']").selectOption("1988");
         $x("//div[@aria-label='Choose Monday, February 29th, 1988']").click();
         $x("//input[@id='subjectsInput']").setValue("subjects");
         $x("//label[text()='Sports']").click();
