@@ -36,7 +36,7 @@ public class DemoqaTest {
         $x("//label[text()='Sports']").click();
         $x("//label[text()='Reading']").click();
         $x("//label[text()='Music']").click();
-        $x("//input[@id='uploadPicture']").uploadFile(new File("src/test/data/ivan.jpeg"));
+        $x("//input[@id='uploadPicture']").uploadFile(new File("src/test/resources/ivan.jpeg"));
         $x("//textarea[@id='currentAddress']").setValue("Moscow, lenina st 25");
         executeJavaScript("$('footer').remove()");
         executeJavaScript("$('#fixedban').remove()");
