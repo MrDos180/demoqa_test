@@ -1,4 +1,4 @@
-package tests;
+package testdata;
 
 import com.github.javafaker.Faker;
 
@@ -10,20 +10,20 @@ public class TestData {
     static Random random = new Random();
 
 
-    String firstName = faker.elderScrolls().firstName();
-    String lastName = faker.elderScrolls().lastName();
-    String email = faker.internet().emailAddress();
-    String gender = genderRandom();
-    String number = faker.phoneNumber().subscriberNumber(10);
-    String dayBirth = String.valueOf(faker.number().numberBetween(1, 28));
-    String monthBirth = monthRandom();
-    String yearBirth = String.valueOf(faker.number().numberBetween(1970, 2010));
-    String subject = "Math";
-    String hobbie = hobbieRandom();
-    String pictureDirectory = "src/test/resources/ivan.jpeg";
-    String adress = faker.address().fullAddress();
-    String city = cityRandom();
-    String state = getStateByCity(city);
+    public String firstName = faker.elderScrolls().firstName();
+    public String lastName = faker.elderScrolls().lastName();
+    public String email = faker.internet().emailAddress();
+    public String gender = genderRandom();
+    public String number = faker.phoneNumber().subscriberNumber(10);
+    public String dayBirth = String.valueOf(faker.number().numberBetween(1, 28));
+    public String monthBirth = monthRandom();
+    public String yearBirth = String.valueOf(faker.number().numberBetween(1970, 2010));
+    public String subject = "Math";
+    public String hobbie = hobbieRandom();
+    public String pictureDirectory = "src/test/resources/ivan.jpeg";
+    public String adress = faker.address().fullAddress();
+    public String city = cityRandom();
+    public String state = getStateByCity(city);
 
 
     public String cityRandom() {

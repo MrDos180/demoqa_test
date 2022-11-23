@@ -3,6 +3,7 @@ package tests;
 
 import org.junit.jupiter.api.Test;
 import pages.RegistrationPage;
+import testdata.TestData;
 
 public class DemoqaTest extends TestBase {
     RegistrationPage registrationPage = new RegistrationPage();
