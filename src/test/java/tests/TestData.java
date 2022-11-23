@@ -7,7 +7,6 @@ import java.util.Random;
 
 public class TestData {
     static Faker faker = new Faker();
-
     static Random random = new Random();
 
 
@@ -44,7 +43,6 @@ public class TestData {
         cityAndState.put("Panipat", "Haryana");
         cityAndState.put("Jaipur", "Rajasthan");
         cityAndState.put("Jaiselmer", "Rajasthan");
-
         return cityAndState.get(value);
     }
 
@@ -63,7 +61,7 @@ public class TestData {
 
     public static String hobbieRandom() {
         String[] hobbie = {"Sports", "Reading", "Music"};
-        int i = faker.number().numberBetween(0, hobbie.length - 1);
+        int i = random.nextInt(hobbie.length);
         return hobbie[i];
     }
 
