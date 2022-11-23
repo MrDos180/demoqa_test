@@ -26,8 +26,8 @@ public class TestData {
     String state = getStateByCity(city);
 
 
-    public static String cityRandom() {
-        String[] states = {"Delphi", "Agra", "Karnal", "Gurgaon", "Lucknow", "Panipat", "Jaipur", "Jaiselmer"};
+    public String cityRandom() {
+        String[] states = {"Delhi", "Agra", "Karnal", "Gurgaon", "Lucknow", "Panipat", "Jaipur", "Jaiselmer"};
         int i = random.nextInt(states.length);
         return states[i];
     }
