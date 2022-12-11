@@ -8,7 +8,6 @@ public class TestBase {
     static void beforeAll() {
         Configuration.holdBrowserOpen = true;
         Configuration.browserSize = "1920x1080";
-        Configuration.startMaximized = true;
         Configuration.baseUrl = "https://demoqa.com";
     }
 

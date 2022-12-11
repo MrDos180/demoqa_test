@@ -1,5 +1,6 @@
 plugins {
     id 'java'
+    id 'io.qameta.allure' version '2.10.0'
 }
 
 group 'com.example'
@@ -10,19 +11,34 @@ repositories {
 }
 
 ext {
-    junitVersion = '5.7.1'
+    junitVersion = '5.9.0'
 }
 
 sourceCompatibility = '11'
 targetCompatibility = '11'
 
+
+allure {
+    report {
+        version.set("2.19.0")
+    }
+    adapter {
+        aspectjWeaver.set(true)
+        frameworks {
+            junit5 {
+                adapterVersion.set("2.19.0")
+            }
+        }
+    }
+}
 tasks.withType(JavaCompile) {
     options.encoding = 'UTF-8'
 }
 
 dependencies {
-    testImplementation('com.codeborne:selenide:5.23.0')
-    testImplementation('org.slf4j:slf4j-simple:1.7.30')
+    testImplementation('com.codeborne:selenide:6.10.1',
+            'io.qameta.allure:allure-selenide:2.20.0')
+    testImplementation('org.slf4j:slf4j-simple:2.0.5')
 
     implementation 'com.github.javafaker:javafaker:1.0.2'
 
