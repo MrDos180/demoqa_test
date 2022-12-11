@@ -70,7 +70,7 @@ public class DemoqaTest extends TestBase {
                     verifyResult("Address", testData.adress).
                     verifyResult("State and City", testData.state+ " "+testData.city);
         });
-        step("Надимаем кнопка close",()->{
+        step("Нажимаем кнопку close",()->{
             registrationPage.clickClose();;
         });
 
